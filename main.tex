@@ -1,0 +1,61 @@
+\documentclass[12pt]{report}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Preamble (Required Packages)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[a4paper]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[
+backend=biber,
+style=numeric,
+sortcites=true,
+sorting=ynt,
+]{biblatex}
+\usepackage{longtable}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Include Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \bibliography{zotero_ai_story_gen}
+\addbibresource{zotero_ai_story_gen.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define all the variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mytitle}{AI-based Story Generation}
+\newcommand{\mydeptname}{Computer Science and Technology}
+\newcommand{\mydeptnameabbr}{C.S.T.}
+\newcommand{\myspecialization}{Computer Science and Engineering}
+\newcommand{\mydepthod}{Dr. Apurba Sarkar}
+\newcommand{\myname}{Abir Mondal}
+\newcommand{\myenrollmentno}{2024CSM001}
+\newcommand{\myguide}{Dr. Samit Biswas}
+
+\baselineskip=18 pt plus 1 pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Begins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+    \pagenumbering{roman}
+    \include{Formalities/01 title_page}
+    \include{Formalities/02 certificate}
+    \include{Formalities/03 acknowledgement}
+    \include{Formalities/04 abstract}
+    \include{Formalities/05 contents}
+    \pagenumbering{arabic}
+    \include{Chapters/01 introduction}
+    \include{Chapters/02 literature_survey}
+    \include{Chapters/03 prerequisites}
+    \include{Chapters/04 proposed_method}
+    \include{Chapters/05 future_work}
+    \include{Chapters/06 conclusion}
+    \include{Chapters/07 references}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Ends
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
