@@ -1,0 +1,37 @@
+\section{Comparison Table}
+
+\begin{longtable}{|p{1.5cm}|p{3cm}|p{2cm}|p{2cm}|p{3cm}|p{2.5cm}|}
+    \caption{Comparison of story generation models} \label{tab:papers_comparison_table} \\
+    \hline
+    \textbf{Paper} & \textbf{Objective} & \textbf{Model} & \textbf{Dataset} & \textbf{Methodology} & \textbf{Result} \\
+    \hline
+    \endfirsthead
+    Pichotta and Mooney, 2014 \cite{pichotta_statistical_2014} & Learn statistical scripts with multi-argument events; Reframe event prediction as language modelling & Discrimin-ative Language Model & - &  Trained discriminative language model to predict story events; Used multi-argument events & Improved performance compared to prior count-based methods \\
+    \hline
+    Sutskever et al., 2014 \cite{sutskever_sequence_2014} & Foundational model for sequence-to-sequence mapping & Seq2Seq Learning with Neural Networks, often using RNN/ LSTM & ROCStories & Neural networks trained for sequence-to-sequence mapping; Used as encoder-decoder & Foundational model widely used as a component or baseline \\
+    \hline
+    Pichotta and Mooney, 2016 \cite{pichotta_learning_2016} & Learn statistical scripts; Predict next event element; Learn stories statistically & LSTM, RNN & - & Trained LSTM statistically on stories; Predicted event tuple elements; Extended to raw text event prediction & Improved performance over baselines; Minimal gap between raw text and structured events \\
+    \hline
+    Fan et al., 2018 \cite{fan_hierarchical_2018} & Explore hierarchical story generation for coherence and fluency; Decompose generation into premise and text stages & Convolutio-nal LM + Seq2Seq; Fusion and self-attention & 300K human-written stories with prompts & Two-stage process: premise generation, then text generation; Used fusion and self-attention & Large improvements over baselines; Generated up to 1000 tokens \\
+    \hline
+    Martin et al., 2018 \cite{martin_event_2018} & Use event representations for automated story generation; Decompose generation into event-to-event and event-to-sentence & Deep Neural Nets (RNNs/ LSTMs); Explored event-to-event and event-to-sentence & Movie plots; Knowledge graphs & Trained RNNs/ LSTMs on movie plots; Explored event sequence generation and transformation to text & Used event representations for generation; Showed improvements in plot generation via event abstraction \\
+    \hline
+    Tambwe-kar et al., 2019 \cite{tambwekar_controllable_2018} & Generate controllable neural story plots & Neural model using RL and reward shaping & Science fiction TV show plot summaries (implied) & Employed reinforcement learning with reward shaping to guide plot generation & Achieved controllable neural story plot generation \\
+    \hline
+    Chen et al., 2019 \cite{chen_incorporating_2019} & Incorporate structured commonsense knowledge in story completion; Enhance cloze-style reading comprehension & Model incorporating structured commonsense knowledge & Story completion task; Related to cloze tasks like SCT/ ROCStories & Incorporated structured/external commonsense knowledge to improve task performance & Enhanced performance on story completion by incorporating commonsense knowledge \\
+    \hline
+    Ammana-brolu et al., 2020 \cite{ammanabrolu_story_2020} & Expand plot events into sentences; Generate NL guided by events; Decompose generation & Ensemble model; event2event and event2sent processes; Constrained beam search & Science fiction TV show plot summaries (wikia.com) & Decomposed generation into event sequence generation and event-to-sentence transformation; Used ensemble and constrained search for event-guided generation & Generated more coherent and plausible stories than baselines (human study) \\
+    \hline
+    Alabdul-karim et al., 2021 \cite{alabdulkarim_goal-directed_2021} & Aimed at controlling the plot of computer-generated stories to reach a specific goal event. & Fine-tuning a transformer-based language model (like GPT-2) & Science fiction plot corpus & Utilised RL and reward shaping; includes proximal policy optimisation to fine-tune a language model to be goal-seeking, and extracting a knowledge graph & RL-augmented models outperformed GPT-2 baselines. \\
+    \hline
+    Castrica-to et al., 2021 \cite{castricato_tell_2021} & Story generation via question answering & Model using question answering approach & - & Utilized a question-answering approach for story generation & Explores story generation using question answering \\
+    \hline
+    Tang et al., 2022 \cite{tang_ngep_2022} & Generate event sequences for story generation using graph-based planning; Address coherence and control issues in end-to-end models & NGEP (Graph-based Event Planning framework); Event graph inference & - & Generates event sequence via inference on an event graph; Uses neural event advisor; Experiments on multiple criteria & Outperforms SOTA event planning approaches on event sequence generation and downstream story generation \\
+    \hline
+    Khan et al., 2023 \cite{khan_storygenai_2023} & Generate meaningful stories with genre-keyword conditional text generation focusing on coherency & Optimized Hugging Face GPT-2 & - & Proposed scheme for genre-keyword conditional generation; Optimized GPT-2 & BLEU score of 0.704 (avg over genres); Claims semantic coherence and title relevance \\
+    \hline
+    Kim et al., 2023 \cite{kim_multi-modal_2023} & Propose multi-modal framework with automated storyline decision-making; Maintain story coherence; Visualize story & BERT-based (story guidance); GPT2-medium (story generation) & Large-scale dataset (not explicitly named) & Uses BERT for storyline prediction (QA); Uses GPT2-medium for text generation; Evaluated with Recall & Improved coherence of generated stories (human evaluation); Storyline guidance predicts relevant entities \\
+    \hline
+    Wang et al., 2024 \cite{wang_guiding_2024} & Guide and diversify LLM-based story generation & Large Language Models (LLMs) & - & Applied Answer Set Programming (ASP) to guide and diversify LLM output & ASP-guided stories are more semantically diverse compared to unguided \\
+    \hline
+\end{longtable}

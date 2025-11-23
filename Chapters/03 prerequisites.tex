@@ -1,0 +1,69 @@
+\chapter{Prerequisites}
+
+Before proceeding, these are the prerequisites:
+
+\begin{itemize}
+    \item \textbf{Events / Event Representations / Event Sequences}: Structured or semi-structured representations of actions or happenings in a story, often extracted from text, used as building blocks for generating narrative content.
+    \par
+    Example:
+    \begin{itemize}
+        \item \textbf{Sentence 01}: Mary emailed Jim and he responded to her immediately.
+        \par
+        \textbf{Events}: \texttt{email(mary,jim,·)}, \texttt{respond(jim,mary,·)}
+    
+        \item \textbf{Sentence 02}: John and Mary went to the store.
+        \par
+        \textbf{Events}: \texttt{⟨john,go,store,$\phi$⟩}, \texttt{⟨mary,go,store,$\phi$⟩}.
+    \end{itemize}
+    
+    \item \textbf{Syntactic and Coreference Information}: Data derived from analysing the grammatical structure of sentences (syntactic information, dependencies) and identifying which different words or phrases refer to the same real-world entity (coreference information).
+    \par
+    Example:
+    \begin{itemize}
+        \item \textbf{Sentence 01}: Mary emailed Jim and he responded to her immediately.
+        \par
+        \textbf{Coreference Information}: He refers to Jim, Her Refers to Mary.
+    
+        \item \textbf{Sentence 02}: John and Mary went to the store.
+        \par
+        \textbf{Syntactic Information}: “went” - verb, “store” - object, “and” - splits into 2 events.
+    \end{itemize}
+    
+    \item \textbf{Prompts / Premises / Titles / Story Context / Input Sentences / Specifications}: Initial text or explicit parameters provided to a system to define the topic, starting point, constraints, or desired characteristics of the generated story.
+    \par
+    Example:
+    \begin{itemize}
+        \item \textbf{Prompt}: A person with a high school education gets sent back into the 1600’s and tries to explain science and technology to the people.
+
+        \item \textbf{Title}: The Bike Accident
+
+        \item \textbf{Input Sentences}
+        \begin{itemize}
+            \item Carrie had just learned how to ride a bike.
+            \item She didn't have a bike of her own.
+            \item Carrie would sneak rides on her sister's bike.
+            \item She got nervous on a hill and crashed into a wall.
+            \item The bike frame bent and Carrie got a deep gash on her leg.
+        \end{itemize}
+    \end{itemize}
+    
+    \item \textbf{Outlines / Plots / Storylines}: A structured, higher-level representation of the key events, goals, or sequence of happenings that form the backbone of a story.
+    \par
+    Example:
+    \begin{itemize}
+        \item \textbf{Prompt}: When the sunny lifeguard, Sunny, confronts a supernatural mystery in her town, she must overcome her clumsiness and a rival lifeguard.
+        \par
+        \begin{verbatim}
+        [
+            introduce_character:sunny,
+            add_obstacle:supernatural,
+            introduce_character:mysterious, add_twist,
+            introduce_character:clumsy,
+                                introduce_rival_character,
+                                level_up_obstacle
+        ]
+        \end{verbatim}
+    \end{itemize}
+\end{itemize}
+
+\input{Chapters/03.1 problem_statement}
